@@ -43,10 +43,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
-//@CrossOrigin
+//@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
+@RestController
+@CrossOrigin
 @RequestMapping("/api/user")
 @Api(value = "User Rest API", description = "Defines endpoints for the logged in user. It's secured by default")
 public class UserController {

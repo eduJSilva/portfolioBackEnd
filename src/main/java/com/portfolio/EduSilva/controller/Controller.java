@@ -41,9 +41,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+
+//@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")//@CrossOrigin(origins = "http://localhost:4200")
+
 @RestController
-@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")//@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin
+@CrossOrigin
 public class Controller {
 
     @Autowired
