@@ -45,7 +45,7 @@ import org.springframework.web.multipart.MultipartFile;
 //@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")//@CrossOrigin(origins = "http://localhost:4200")
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://porfolioeduardojsilva.web.app")
 public class Controller {
 
     @Autowired

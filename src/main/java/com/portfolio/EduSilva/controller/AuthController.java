@@ -63,9 +63,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 //@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://porfolioeduardojsilva.web.app")
 @RequestMapping("/api/auth")
 @Api(value = "Authorization Rest API", description = "Defines endpoints that can be hit only when the user is not logged in. It's not secured by default.")
 public class AuthController {
