@@ -192,7 +192,7 @@ public class AuthController {
     @GetMapping("/registrationConfirmation")
     @ApiOperation(value = "Confirms the email verification token that has been generated for the user during registration")
     public ResponseEntity confirmRegistration(@ApiParam(value = "the token that was sent to the user email") @RequestParam("token") String token, HttpServletResponse response) throws IOException {
- response.sendRedirect("http://localhost:4200/inicio/register/confirmado");
+ response.sendRedirect("https://porfolioeduardojsilva.web.app/inicio/register/confirmado");
         return authService.confirmEmailRegistration(token)
                 .map(user -> ResponseEntity.ok(new ApiResponse(true, "Registro de usuario confirmado!")))
                 .orElseThrow(() -> new InvalidTokenRequestException("Email Verification Token", token, "Failed to confirm. Please generate a new email verification request"));
