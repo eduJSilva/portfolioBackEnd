@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,6 +30,16 @@ public class PasswordResetTokenService {
         this.repository = repository;
     }
 
+    /**
+     * Finds a List of  Password token in the database
+     * @return 
+     */
+    public List<PasswordResetToken> getTokenList() {
+        
+        return repository.findAll();
+    }
+    
+    
     /**
      * Finds a token in the database given its naturalId or throw an exception.
      * The reset token must match the email for the user and cannot be used again

@@ -97,7 +97,7 @@ public class MailService {
     public void sendAccountChangeEmail(String action, String actionStatus, String to)
             throws IOException, TemplateException, MessagingException {
         Mail mail = new Mail();
-        mail.setSubject("Account Status Change [Portfolio Eduardo J. Silva]");
+        mail.setSubject("El Estado de su cuenta ha cambiado [Portfolio Eduardo J. Silva]");
         mail.setTo(to);
         mail.setFrom(mailFrom);
         mail.getModel().put("userName", to);

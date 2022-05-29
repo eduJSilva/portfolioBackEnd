@@ -47,8 +47,8 @@ import java.util.Optional;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
+//@CrossOrigin(origins = "http://localhost:4200")
 @CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
 @RequestMapping("/api/auth")
 @Api(value = "Authorization Rest API", description = "Defines endpoints that can be hit only when the user is not logged in. It's not secured by default.")
@@ -130,7 +130,7 @@ public class AuthController {
                 .orElseThrow(() -> new UserRegistrationException(registrationRequest.getEmail(), "Missing user object in database"));
     }
 
-    /**
+       /**
      * Receives the reset link request and publishes an event to send email id containing
      * the reset link if the request is valid. In future the deeplink should open within
      * the app itself.
@@ -155,6 +155,7 @@ public class AuthController {
      * Receives a new passwordResetRequest and sends the acknowledgement after
      * changing the password to the user's mail through the event.
      */
+
     @PostMapping("/password/reset")
     @ApiOperation(value = "Reset the password after verification and publish an event to send the acknowledgement " +
             "email")
@@ -169,7 +170,6 @@ public class AuthController {
                 })
                 .orElseThrow(() -> new PasswordResetException(passwordResetRequest.getToken(), "Error in resetting password"));
     }
-
     /**
      * Confirm the email verification token generated for the user during
      * registration. If token is invalid or token is expired, report error.

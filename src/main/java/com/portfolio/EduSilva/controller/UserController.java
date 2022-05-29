@@ -5,16 +5,22 @@ import com.portfolio.EduSilva.annotation.CurrentUser;
 import com.portfolio.EduSilva.event.OnUserAccountChangeEvent;
 import com.portfolio.EduSilva.event.OnUserLogoutSuccessEvent;
 import com.portfolio.EduSilva.exception.UpdatePasswordException;
+import com.portfolio.EduSilva.model.Persona;
 import com.portfolio.EduSilva.model.authapp.CustomUserDetails;
+import com.portfolio.EduSilva.model.authapp.PasswordResetToken;
+import com.portfolio.EduSilva.model.authapp.User;
 import com.portfolio.EduSilva.model.authapp.payload.ApiResponse;
 import com.portfolio.EduSilva.model.authapp.payload.LogOutRequest;
 import com.portfolio.EduSilva.model.authapp.payload.UpdatePasswordRequest;
 import com.portfolio.EduSilva.service.authService.AuthService;
+import com.portfolio.EduSilva.service.authService.MailService;
+import com.portfolio.EduSilva.service.authService.PasswordResetTokenService;
 import com.portfolio.EduSilva.service.authService.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +36,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
-//@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
+
 @RestController
+//@CrossOrigin(origins = "http://localhost:4200")
 @CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
 @RequestMapping("/api/user")
 @Api(value = "User Rest API", description = "Defines endpoints for the logged in user. It's secured by default")
@@ -46,12 +53,18 @@ public class UserController {
     private final UserService userService;
 
     private final ApplicationEventPublisher applicationEventPublisher;
+    
+    private final PasswordResetTokenService passTokenService;
+    
+    private final MailService mailService;
 
     @Autowired
-    public UserController(AuthService authService, UserService userService, ApplicationEventPublisher applicationEventPublisher) {
+    public UserController(AuthService authService, UserService userService, ApplicationEventPublisher applicationEventPublisher, PasswordResetTokenService passTokenService, MailService mailService) {
         this.authService = authService;
         this.userService = userService;
         this.applicationEventPublisher = applicationEventPublisher;
+        this.passTokenService = passTokenService;
+        this.mailService = mailService;
     }
 
     /**
@@ -76,6 +89,27 @@ public class UserController {
         return ResponseEntity.ok("acercadelAdministrador");
     }
 
+    /**
+     * Returns all users in the system.
+     * @return 
+     */
+    @GetMapping("/users")
+    @ApiOperation(value = "Returns the list of configured users")
+    public  List<User> getAllUsers() {
+        return userService.verUsuarios();
+    }
+    
+        /**
+     * Returns List of Password Reset Token in the system.
+     * @return 
+     */
+    @GetMapping("/password/list/token")
+    @ApiOperation(value = "Return List of Password Token")
+    public  List<PasswordResetToken> getPasswordToken() {
+        return passTokenService.getTokenList();
+    }
+    
+    
     /**
      * Updates the password of the current logged in user
      */

@@ -1,3 +1,4 @@
+<#ftl encoding='UTF-8'>
 <!-- [if !mso]><!--><!--![endif]--><!-- Normalize Styles --><!-- [if gte mso 9]>
 <style type="text/css">
             /* What it does: Normalize space between bullets and text. */
@@ -133,10 +134,10 @@
                                             style="padding: 20px 35px; text-align: left; color: #6f6f6f; font-family: sans-serif; border-top: 0;">
                                             <h1 class="tw-h1"
                                                 style="font-size: 24px; font-weight: bold; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px; color: #474747;">
-                                                Hello ${userName},</h1>
+                                                Hola ${userName},</h1>
                                             <p class=""
                                                style="margin: 20px 0; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                            <span style="font-weight: 400;">Please click the below button to change your password for <strong>Customer Engagement App</strong>.The link will be valid for next ${expirationTime} minutes.</span><br/><br/><span
+                                            <span style="font-weight: 400;">Por favor, haga clic en el botón de abajo para cambiar su contraseña para <strong>Portfolio Eduardo J Silva App</strong>.El enlace será válido por ${expirationTime} minutos.</span><br/><br/><span
                                                 style="font-weight: 400;">
                                             <table style="border: 0; width: 100%;" cellspacing="0" cellpadding="0">
                                                 <tbody>
@@ -154,7 +155,7 @@
                                                                     <![endif]--> <!-- [if !mso]><!--> <a
                                                                             class="button__a"
                                                                             style="border-radius: 4px; color: #ffffff; display: block; font-family: sans-serif; font-size: 18px; font-weight: bold; mso-height-rule: exactly; line-height: 1.1; padding: 14px 18px; text-decoration: none; text-transform: none; border: 0;"
-                                                                            href="${userResetPasswordLink}"
+                                                                             href="https://porfolioeduardojsilva.web.app/inicio/newpassword"
                                                                             target="_blank"
                                                                             rel="noopener">Reset 
                                                                         Link</a> <!--![endif]--></td>
@@ -171,13 +172,12 @@
                                             </div>
                                             <p class=""
                                                style="margin: 20px 0; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                                Contact our support team if you have any questions or concerns.&nbsp;<a
+                                                Si tiene alguna pregunta o inquietud, por favor póngase en contacto: <a
                                                     style="color: #316fea; text-decoration: none;"
-                                                    href="javascript:void(0);" target="_blank" rel="noopener">Ask us any
-                                                question</a></p>
+                                                   href="mailto:silvaeduardojavier@hotmail.com" target="_blank" rel="noopener">silvaeduardojavier@hotmail.com</a></p>
                                             <p class="tw-signoff"
                                                style="margin: 45px 0 5px; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                                Our best, <br/> The Customer Engagement App team</p>
+                                                Desde ya muchas gracias, <br/>Eduardo Javier Silva</p>
                                         </td>
                                     </tr>
                                     </tbody>

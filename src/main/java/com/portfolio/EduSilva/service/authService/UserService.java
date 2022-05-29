@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -38,6 +39,14 @@ public class UserService {
         this.refreshTokenService = refreshTokenService;
     }
 
+    /**
+     * Finds all users in the database
+     * @return 
+     */
+    public List<User> verUsuarios() {
+        return userRepository.findAll();
+    }
+    
     /**
      * Finds a user in the database by username
      */

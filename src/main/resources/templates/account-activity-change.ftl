@@ -1,3 +1,4 @@
+<#ftl encoding='UTF-8'>
 <!-- [if !mso]><!--><!--![endif]--><!-- Normalize Styles --><!-- [if gte mso 9]>
 <style type="text/css">
             /* What it does: Normalize space between bullets and text. */
@@ -56,7 +57,7 @@
                                         <td class="tw-card-header"
                                             style="padding: 5px 5px px; width: 366px; color: #ffff; text-decoration: none; font-family: sans-serif;"
                                             align="center"><span
-                                                style="font-weight: 600;">Account Status Changed</span></td>
+                                                style="font-weight: 600;">El Estado de su cuenta ha cambiado</span></td>
 
                                     </tr>
                                     </tbody>
@@ -69,13 +70,13 @@
                                             style="padding: 20px 35px; text-align: left; color: #6f6f6f; font-family: sans-serif; border-top: 0;">
                                             <h1 class="tw-h1"
                                                 style="font-size: 24px; font-weight: bold; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px; color: #474747;">
-                                                Hello ${userName},</h1>
+                                                Hola ${userName},</h1>
                                             <p class=""
                                                style="margin: 20px 0; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                            <span style="font-weight: 400;">A new activity was initiated on your account.</span>
-                                            <br></br><span style="font-weight: 400;">Action: <strong>${action}</strong></span>
+                                            <span style="font-weight: 400;">Se inició una nueva actividad en su cuenta.</span>
+                                            <br></br><span style="font-weight: 400;">Acción: <strong>${action}</strong></span>
                                             <br></br><span
-                                                style="font-weight: 400;">Status: <strong>${actionStatus}</strong></span>
+                                               style="font-weight: 400;">Status: <strong>${actionStatus}</strong></span>
 
                                             <div class=""
                                                  style="border-top: 0; font-size: 1px; mso-line-height-rule: exactly; line-height: 1px; max-height: 0; margin: 20px 0; overflow: hidden;">
@@ -83,14 +84,12 @@
                                             </div>
                                             <p class=""
                                                style="margin: 20px 0; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                                Contact our support team if you have any questions or concerns.&nbsp;
-                                                <br></br><a
+                                                 Si tiene alguna pregunta o inquietud, por favor póngase en contacto: <a
                                                     style="color: #316fea; text-decoration: none;"
-                                                    href="javascript:void(0);" target="_blank" rel="noopener">Ask us any
-                                                question</a></p>
+                                                   href="mailto:silvaeduardojavier@hotmail.com" target="_blank" rel="noopener">silvaeduardojavier@hotmail.com</a></p>
                                             <p class="tw-signoff"
                                                style="margin: 45px 0 5px; font-size: 16px; mso-line-height-rule: exactly; line-height: 24px;">
-                                                Our best, <br/> The Customer Engagement App team</p>
+                                                Desde ya muchas gracias, <br/>Eduardo Javier Silva</p>
                                         </td>
                                     </tr>
                                     </tbody>
