@@ -40,8 +40,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://porfolioeduardojsilva.web.app")
 @RequestMapping("/api/user")
 @Api(value = "User Rest API", description = "Defines endpoints for the logged in user. It's secured by default")
 public class UserController {
